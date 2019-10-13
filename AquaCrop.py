@@ -6,9 +6,10 @@ import os
 import shutil
 import sys
 import math
-import gc
+import gc   # 提供设置垃圾回收选项的接口
 
-import pcraster as pcr
+# PCRaster是荷兰Utrecht大学为了解决地貌和水文问题的空间分析函数，以及相应的用于GIS环境下建立动态模型的语言环境---空间动态模型语言，较好的满足了建立空间动态模型的需要。
+import pcraster as pcr   # http://pcraster.geo.uu.nl/pcraster/4.2.1/documentation/index.html
 import VirtualOS as vos
 
 from Messages import *

@@ -1144,13 +1144,13 @@ def getFullPath(inputPath,absolutePath,completeFileName = True):
         if absolutePath.endswith('/'): 
             absolutePath = str(absolutePath)
         else:
-			absolutePath = str(absolutePath)+'/'    
+            absolutePath = str(absolutePath)+'/'
         fullPath = str(absolutePath)+str(inputPath)
     
     if completeFileName:
         if fullPath.endswith(suffix): 
             fullPath = str(fullPath)
-    	else:
+        else:
             fullPath = str(fullPath)+'/'    
 
     return fullPath    		
@@ -1218,7 +1218,7 @@ def getMapAttributesALL(cloneMap,arcDegree=True):
     cOut,err = subprocess.Popen(str('mapattr -p %s ' %(cloneMap)), stdout=subprocess.PIPE,stderr=open(os.devnull),shell=True).communicate()
 
     if err !=None or cOut == []:
-        print "Something wrong with mattattr in VirtualOS, maybe clone Map does not exist ? "
+        print("Something wrong with mattattr in VirtualOS, maybe clone Map does not exist ?")
         sys.exit()
     cellsize = float(cOut.split()[7])
     if arcDegree == True: cellsize = round(cellsize * 360000.)/360000.
